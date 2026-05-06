@@ -3,60 +3,57 @@
 <head>
     <title>Keziah's | Portfolio</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Mono + pixel fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
         body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 40px;
-    max-width: 800px;
-    background: #f4f6f2;
-    color: #3e4a3f;
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-}
+            font-family: 'IBM Plex Mono', monospace;
+            margin: 40px;
+            max-width: 800px;
+            background: #f3f5f2;
+            color: #2f3a30;
+            line-height: 1.6;
+            position: relative;
+        }
 
-        /* Grain overlay */
+        /* subtle pixel/grid texture */
         body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.08;
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.06;
 
-    background-image:
-        radial-gradient(circle at 20% 20%, rgba(0,0,0,0.15) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 80% 40%, rgba(0,0,0,0.12) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 40% 80%, rgba(0,0,0,0.1) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 70% 70%, rgba(0,0,0,0.12) 0.5px, transparent 0.5px);
-
-    background-size: 8px 8px, 12px 12px, 10px 10px, 14px 14px;
-}
+            background-image:
+                linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px);
+            background-size: 12px 12px;
+        }
 
         h1 {
-            font-family: 'Pacifico', cursive;
-            color: #6b8f71;
-            font-size: 2.8em;
-            margin-bottom: 0;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1.6em;
+            color: #4f6f52;
+            margin-bottom: 10px;
         }
 
         h2 {
-            color: #6b8f71;
-            border-bottom: 2px dashed #cfd8cc;
-            padding-bottom: 5px;
+            color: #4f6f52;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
         }
 
         p {
-            font-size: 1.05em;
+            font-size: 0.95em;
         }
 
         a {
-            color: #7a9e7e;
+            color: #5c7f60;
             text-decoration: none;
-            font-weight: 600;
         }
 
         a:hover {
@@ -64,63 +61,72 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.85); /* slight transparency for aesthetic layering */
-            backdrop-filter: blur(4px); /* soft glass effect */
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            background: #ffffff;
+            border: 1px solid #dfe5dc;
+            padding: 18px;
+            margin-bottom: 18px;
         }
 
         hr {
             border: none;
-            border-top: 1px solid #d8e0d4;
-            margin: 30px 0;
+            border-top: 1px solid #dfe5dc;
+            margin: 25px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.8em;
+            padding: 3px 6px;
+            border: 1px solid #cdd5ca;
+            margin-top: 6px;
         }
 
         .footer {
             margin-top: 30px;
-            font-size: 0.95em;
-            color: #7a8676;
+            font-size: 0.8em;
+            color: #6d776b;
         }
     </style>
 </head>
 
 <body>
 
-<h1>✨ Keziah Estaya ✨</h1>
-<p>☕ MIS Student | Data & Systems Enthusiast</p>
+<h1>KEZIAH_ESTAYA.exe</h1>
+<p>> MIS student // data + systems</p>
 
 <hr>
 
 <div class="card">
-    <h2>🌿 About Me</h2>
+    <h2>[ ABOUT ]</h2>
     <p>
-        I’m a Management Information Systems student who loves using technology to make better decisions and tell meaningful stories with data.
-        I enjoy turning messy information into something clear, useful, and (hopefully) a little aesthetic.
+        I’m a Management Information Systems student focused on using technology to improve decision-making.
+        I like turning complex data into clear, usable insights.
     </p>
 </div>
 
 <div class="card">
-    <h2>📊 Coursework & Projects</h2>
+    <h2>[ PROJECTS ]</h2>
 
     <p><b>Data Visualization (MIS 4397)</b><br>
-    Designed visual dashboards and charts to communicate insights clearly and effectively.
-    Focused on storytelling, usability, and helping people actually understand the data.
+    Built dashboards and visual reports to communicate insights clearly.
+    Focused on clarity, usability, and decision support.
     </p>
+
+    <div class="tag">data viz</div>
+    <div class="tag">dashboards</div>
+    <div class="tag">storytelling</div>
 </div>
 
 <div class="card">
-    <h2>🌐 Connect</h2>
+    <h2>[ CONNECT ]</h2>
     <p>
         <a href="https://www.linkedin.com/in/keziah-estaya/" target="_blank">
-            💼 View my LinkedIn
+            open linkedin →
         </a>
     </p>
 </div>
 
 <div class="footer">
-    <!--<p>made with ☁️ + calm spring energy</p>-->
 </div>
 
 </body>
