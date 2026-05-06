@@ -8,28 +8,33 @@
 
     <style>
         body {
-            font-family: 'Quicksand', sans-serif;
-            margin: 40px;
-            max-width: 800px;
-            background: #f4f6f2;
-            color: #3e4a3f;
-            line-height: 1.6;
-            position: relative;
-        }
+    font-family: 'Quicksand', sans-serif;
+    margin: 40px;
+    max-width: 800px;
+    background: #f4f6f2;
+    color: #3e4a3f;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
 
         /* Grain overlay */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-            opacity: 0.25; /* adjust for stronger/weaker grain */
-            pointer-events: none;
-            z-index: -1;
-        }
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.08;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(0,0,0,0.15) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 80% 40%, rgba(0,0,0,0.12) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 40% 80%, rgba(0,0,0,0.1) 0.5px, transparent 0.5px),
+        radial-gradient(circle at 70% 70%, rgba(0,0,0,0.12) 0.5px, transparent 0.5px);
+
+    background-size: 8px 8px, 12px 12px, 10px 10px, 14px 14px;
+}
 
         h1 {
             font-family: 'Pacifico', cursive;
