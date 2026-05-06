@@ -3,7 +3,7 @@
 <head>
     <title>Keziah's | Portfolio</title>
 
-    <!-- Cute + clean fonts -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
@@ -11,21 +11,36 @@
             font-family: 'Quicksand', sans-serif;
             margin: 40px;
             max-width: 800px;
-            background: #f4f6f2; /* soft sage background */
+            background: #f4f6f2;
             color: #3e4a3f;
             line-height: 1.6;
+            position: relative;
+        }
+
+        /* Grain overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+            opacity: 0.25; /* adjust for stronger/weaker grain */
+            pointer-events: none;
+            z-index: -1;
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #6b8f71; /* muted green */
+            color: #6b8f71;
             font-size: 2.8em;
             margin-bottom: 0;
         }
 
         h2 {
             color: #6b8f71;
-            border-bottom: 2px dashed #cfd8cc; /* soft neutral line */
+            border-bottom: 2px dashed #cfd8cc;
             padding-bottom: 5px;
         }
 
@@ -39,12 +54,13 @@
             font-weight: 600;
         }
 
-        a: hover {
+        a:hover {
             text-decoration: underline;
         }
 
         .card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.85); /* slight transparency for aesthetic layering */
+            backdrop-filter: blur(4px); /* soft glass effect */
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
@@ -99,7 +115,7 @@
 </div>
 
 <div class="footer">
-    <p>made with ☁️ + calm spring energy</p>
+    <!--<p>made with ☁️ + calm spring energy</p>-->
 </div>
 
 </body>
